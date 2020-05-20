@@ -32,7 +32,7 @@ Change these variables using `modGRUBShell.efi` with the `setup_var` command
 | Variable              | Offset | Value            | Comment                                             |
 | ---                   | ---    | ---              | ---                                                 |
 | CFG Lock              | 0x4de  | 0x00  (disabled) | Disable CFG Lock to prevent MSR 0x02 errors on boot |
-| DVMT Pre-allocation   | 0x785  | 0x2  (64M)       | Increase DVMT pre-allocated to 64M                  |
+| DVMT Pre-allocation   | 0x785  | 0x06  (192M)     | Increase DVMT pre-allocated to by 3*64M  (0x2)      |
 | DVMT Total Gfx Memory | 0x786  | 0x03 (max)       | Increase total gfx memory limit to maximum          |
 
 ## Extracting BIOS
