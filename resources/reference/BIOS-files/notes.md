@@ -27,6 +27,14 @@
 - Auto OS recovery threshold: OFF
 - SupportAssist OS Recovery: OFF
 
+##  UEFI Variables
+Change these variables using `modGRUBShell.efi` with the `setup_var` command
+| Variable              | Offset | Value            | Comment                                             |
+| ---                   | ---    | ---              | ---                                                 |
+| CFG Lock              | 0x4de  | 0x00  (disabled) | Disable CFG Lock to prevent MSR 0x02 errors on boot |
+| DVMT Pre-allocation   | 0x785  | 0x2  (64M)       | Increase DVMT pre-allocated to 64M                  |
+| DVMT Total Gfx Memory | 0x786  | 0x03 (max)       | Increase total gfx memory limit to maximum          |
+
 ## Extracting BIOS
 - Download Dell BIOS (currently 2.13.0)
 - On Windows:
