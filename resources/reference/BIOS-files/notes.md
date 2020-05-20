@@ -1,4 +1,32 @@
 # BIOS Notes
+## Configure BIOS Settings
+- Boot Sequence: Delete All
+- Sata: AHCI
+- Enable SMART Reporting
+- Disable thunderbolt boot and pre-boot support
+- USB security level: disable
+- Enable USB powershare
+- Enable Unobtrusive mode
+- Disable SD Card Reader (saves 0.5W power)
+- TPM off
+- Deactivate Computrace
+- Enable CPU XD
+- Disable Secure Boot
+- Disable Intedl SGX
+- Disable Wake on USB-C Dell Dock
+- Battery charge profile: Standard
+- Numlock Enable
+- FN-lock mode: Disable/Standard
+- Fastboot: minimal
+- BIOS POST Time: 0s
+- Enable VT
+- Disable VT-D
+- Wireless switch OFF for Wifi and BT
+- Allow BIOS Downgrade
+- Allow BIOS Recovery from HD, disable Auto-recovery
+- Auto OS recovery threshold: OFF
+- SupportAssist OS Recovery: OFF
+
 ## Extracting BIOS
 - Download Dell BIOS (currently 2.13.0)
 - On Windows:
