@@ -1,4 +1,8 @@
-# Specs
+# About
+Dell XPS 13" 9360 7th Gen running MacOS Mojave 10.14.6
+
+## Specs
+```
 Dell XPS 13 9360 7th Gen
 CPU: i7-7500U @ 2.70GHz
   Base Frequency: 2.7MHz
@@ -17,9 +21,33 @@ GPU: Intel HD Graphics 620
 Audio: Realtek ALC256/ALC3246
 Thunderbolt: v16.3.61.275 (AO3) June 09, 2017
 Wifi: fenvi Broadcom BCM94360NG
+```
 
 
 ## DSDT names
+```
 iGPU: \SB.PCI0.GFX0
 EC: \_SB.PCI0.LPCB.ECDV
 I2C HID: \_SB.PCI0.I2C1.TPD1
+```
+
+## Pre-Install
+Replace Killer Network Card with Fenvi Broadcom BCM94360NG
+
+## Install
+
+#### Works out of the box
+- Wifi and Bluetooth seem to work fine with the Fenvi card
+- 
+
+## Post-Install
+Copy OpenCore to EFI
+
+Remove eject menu from the status bar
+```bash
+# Back it up, just in case
+cp  /System/Library/CoreServices/Menu Extras/Eject.menu ./resources/backup
+# Delete the file
+# Note: SIP needs to be disabled
+sudo rm -rv  /System/Library/CoreServices/Menu Extras/Eject.menu
+```
