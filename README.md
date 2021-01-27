@@ -1,7 +1,8 @@
 # About
-Dell XPS 13" 9360 7th Gen running MacOS Mojave 10.14.6
+Open Core config to run MacOS Mojave 10.14.6 on a Dell XPS 13" 9360 7th Gen 
 
 ## Specs
+
 ```
 Dell XPS 13 9360 7th Gen
 CPU: i7-7500U @ 2.70GHz
@@ -25,10 +26,19 @@ Wifi: fenvi Broadcom BCM94360NG
 
 
 ## DSDT names
+
 ```
 iGPU: \SB.PCI0.GFX0
 EC: \_SB.PCI0.LPCB.ECDV
 I2C HID: \_SB.PCI0.I2C1.TPD1
+```
+
+Note: when working with the `config.plist`, you can easily get the hex code for the ACPI identifiers with `xxd`
+```
+# example
+printf "GFXO" | xxd
+# returns --> 
+# 00000000: 4746 584f                                GFXO
 ```
 
 ## Pre-Install
@@ -38,7 +48,6 @@ Replace Killer Network Card with Fenvi Broadcom BCM94360NG
 
 #### Works out of the box
 - Wifi and Bluetooth seem to work fine with the Fenvi card
-- 
 
 ## Post-Install
 Copy OpenCore to EFI
